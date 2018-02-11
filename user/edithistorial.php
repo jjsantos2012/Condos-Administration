@@ -1,17 +1,23 @@
+
 <?php
+
 include("config.php");
+//getting id from url
+$id = $_GET['id'];
 
-$conn = mysqli_connect('localhost:3307','root','','residencial');
+//selecting data associated with this particular id
+$result = mysqli_query($mysqli, "SELECT * FROM historialserv WHERE id=$id");
 
-$ed = $_GET['edificio'];
-$ap = $_GET['apartamento'];
-$clave = $_GET['pin'];
-
-
-$info = "SELECT * FROM propietario WHERE edificioID = '".$ed."' AND apartamentoID = '".$ap."' AND clave = '".$clave."'";
-$result = mysqli_query($conn,$info);
+while($res = mysqli_fetch_array($result))
+{
+	$ID = $res['id'];
+	$servicioid = $res['servicioID'];
+	$fecha = $res['fecha'];
+	$comentario = $res['comentario'];
+	$edificio = $res['edificioID'];
+	$apartamento = $res['apartamentoID'];
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +27,7 @@ $result = mysqli_query($conn,$info);
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Admininistrador</title>
+    <title>Propietario</title>
 <link rel="stylesheet" type="text/css" href="style/dashboard.css">
 <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="script" href="style/bootstrap-3.3.7/js/bootstrap.js">
@@ -67,15 +73,18 @@ $result = mysqli_query($conn,$info);
             <li class="nav-item">
               <a class="nav-link active" href="#">Perfil general <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.php">Consultas</a>
+            </li>
          
           </ul>
 
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="addhistorialpro.html">Solicitar servicio</a>
+              <a class="nav-link" href="addServicio.html">Solicitar servicio</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="addVisitapro.html">Registrar visitante</a>
+              <a class="nav-link" href="addVisita.html">Registrar visitante</a>
             </li>
           </ul>
 
@@ -83,43 +92,46 @@ $result = mysqli_query($conn,$info);
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
 		
-		
-
-
-<h2>Informacion personal</h2>	 
+	<h2>Editar historial</h2>
+	<form name="form1" method="post" action="edit.php">
+			 
 		<div class="table-responsive">
             <table class="table table-striped">
-              <thead>
-                <tr>
-            <th>Codigo de propietario</th>
-			<th>Nombre</th>
-			<th>Cedula</th>
-			<th>No. Edificio</th>
-			<th>No. Apartamento</th>
-			<th>PIN de acceso</th>
-                </tr>
-              </thead>
+              
+                <tr> 
+				<thead><td>ID</td></thead>
+				<tbody><td><input type="text" name="id" value="<?php echo $ID;?>"></td></tbody>
+			</tr>
+			<tr> 
+				<thead><td>ID Servicio</td></thead>
+				<tbody><td><input type="text" name="servicio" value="<?php echo $servicioid;?>"></td></tbody>
+			</tr>
+			
+			<tr> 
+				<thead><td>Fecha</td></thead>
+				<tbody><td><input type="text" name="fecha" value="<?php echo $fecha;?>"></td></tbody>
+			</tr>
+			<tr> 
+				<thead><td>Comentario</td></thead>
+				<tbody><td><input type="text" name="comentario" value="<?php echo $comentario;?>"></td></tbody>
+			</tr>
+			<tr> 
+				<thead><td>Codigo de edificio</td></thead>
+				<tbody><td><input type="text" name="edificio" value="<?php echo $edificio;?>"></td></tbody>
+			</tr>
+			<tr> 
+				<thead><td>Codigo de apartamento</td></thead>
+				<tbody><td><input type="text" name="apartamento" value="<?php echo $apartamento;?>"></td></tbody>
+			</tr>
+			<tr>
+				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+				<td><input type="submit" name="update" value="Update"></td>
+			</tr>
+		</table>
 		
-		
-<?php
-
-while($row = mysqli_fetch_array($result)){
-	echo "
-		<tbody><tr>	
-			<td>".$row[0]."</td>
-			<td>".$row[2]."</td>
-			<td>".$row[3]."</td>
-			<td>".$row[1]."</td>
-			<td>".$row[5]."</td>
-			<td>".$row[4]."</td>
-
-		</tr></tbody>";
-}
-echo "</table></div>";
-
-?>
-
- </main>
+		</div>
+	</form>
+</main>
       </div>
     </div>
 

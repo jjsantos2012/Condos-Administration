@@ -146,7 +146,7 @@ while($row = mysqli_fetch_array($serv)){
 			<td>".$row[3]."</td>
 			<td>".$row[4]."</td>
 			<td>".$row[5]."</td>
-			<td><a href=\"edithistorial.php?ed=$row[0]\">Editar</a> | <a href=\"deletehistorial.php?id=$row[0]\" onClick=\"return confirm('Seguro que lo quieres eliminar?')\">Eliminar</a></td>
+			<td><a href=\"edithistorial.php?id=$row[0]\">Editar</a> | <a href=\"deletehistorial.php?id=$row[0]\" onClick=\"return confirm('Seguro que lo quieres eliminar?')\">Eliminar</a></td>
 
 		</tr></tbody>";
 }
