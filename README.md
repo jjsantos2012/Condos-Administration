@@ -5,15 +5,16 @@ This web application was designed so that condos managers can manage theirs and 
 [**Test the live page using the following credential:**](https://condos-administration.000webhostapp.com/)
 
 
-: * for admin user:
+Markup : * for admin user:
               * admin
               * admin
               * admin
 
-: * for regular user:
+Markup : * for regular user:
               * 200-12
               * 3-12
               * 2212
+
 
 > _Note: This project was done in Spanish._
 
@@ -26,12 +27,12 @@ Esta aplicación web fue diseñada para que los administradores de condominios p
 [**Prueba la pagina usando las siguiente credenciales:**](https://condos-administration.000webhostapp.com/)
 
 
-: * Para usuarios administradores:
+Markup : * Para usuarios administradores:
               * admin
               * admin
               * admin
 
-: * Para usuarios regulares:
+Markup : * Para usuarios regulares:
               * 200-12
               * 3-12
               * 2212
