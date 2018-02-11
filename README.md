@@ -44,8 +44,8 @@ Esta aplicación web fue diseñada para que los administradores de condominios p
 
 This project was done using PHP and HTML, and also MySQL as the database. Here is some addition Information that can be useful to run this project locally:
 
-localhost port:8085
-Database port:3305
+  -localhost port:8085
+  -Database port:3305
 
 * * *
 
