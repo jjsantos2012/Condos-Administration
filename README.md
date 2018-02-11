@@ -1,42 +1,40 @@
 # Condos Administration
 
-## Synopsis
-
 This web application was designed so that condos managers can manage theirs and for those who live there can have a way to: report problems, request services or even have the status of services such as: water, gas, electricity, etc.
 
 [**Test the live page using the following credential:**](https://condos-administration.000webhostapp.com/)
 
-for admin user{
-          admin
-          admin
-          admin
-          }
 
-for regular user{
-            200-12
-            3-12
-            2212
-          }  
+: * for admin user:
+              * admin
+              * admin
+              * admin
 
+: * for regular user:
+              * 200-12
+              * 3-12
+              * 2212
 
 > _Note: This project was done in Spanish._
 
+
 * * *
+
 
 Esta aplicación web fue diseñada para que los administradores de condominios puedan manejar los suyos y para aquellos que viven allí pueden tener una manera de: informar problemas, solicitar servicios o incluso tener el estado de los servicios tales como: agua, gas , electricidad, etc.
 
 [**Prueba la pagina usando las siguiente credenciales:**](https://condos-administration.000webhostapp.com/)
-Para usuario administrador{
-          admin
-          admin
-          admin
-          }
 
-Para usuarios regulares{
-            200-12
-            3-12
-            2212
-          }  
+
+: * Para usuarios administradores:
+              * admin
+              * admin
+              * admin
+
+: * Para usuarios regulares:
+              * 200-12
+              * 3-12
+              * 2212
 
 
 > _Nota: Este proyecto fue hecho en Español._
