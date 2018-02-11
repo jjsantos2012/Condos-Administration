@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Residenciales Villas del Mar</title>
+	<link rel="stylesheet" type="text/css" href="style/login.css">
+	<link rel="stylesheet" type="text/css" href="style/bootstrap-3.3.7/css/bootstrap.min">
+	<link rel="stylesheet" type="script" href="style/bootstrap-3.3.7/js/bootstrap.js">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form action="login.php" method="get" class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" name="edificio" class="form-control" placeholder="Codigo de Edificio" required autofocus>
+				 <input type="text" name="apartamento" class="form-control" placeholder="Codigo de Apartamento" required autofocus>
+                <input type="password" name="pin" class="form-control" placeholder="PIN de acceso" required>
+              
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">ENTRAR</button>
+            </form><!-- /form -->
+            <a href="addVisita.html" class="forgot-password">
+                Registrar como invitado...
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+	
+</body>
+</html>
